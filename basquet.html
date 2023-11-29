@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="cat">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcador de Bàsquet</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="marcador%20bàsquet.js"></script>
+</head>
+<body>
+<div class="container">
+  <header class="title text-center">Marcador de Bàsquet</header>
+  <nav class="links">Enllaços a altres pàgines</nav>
+  <div class="period-container text-center">
+    <div id="period" class="period-number">1</div>
+  </div>
+  <table class="scoreboard">
+    <tbody>
+    <tr>
+      <td>LOCAL</td>
+      <td>VISITANT</td>
+    </tr>
+    <tr>
+      <td id="points-a">0</td>
+      <td id="points-b">0</td>
+    </tr>
+    <tr>
+      <td id="fouls-a">0</td>
+      <td id="fouls-b">0</td>
+    </tr>
+
+      <td>
+        <button class="score-button" onclick="canviarMarcadorLocal(1)">+1</button>
+        <button class="score-button" onclick="canviarMarcadorLocal(2)">+2</button>
+        <button class="score-button" onclick="canviarMarcadorLocal(3)">+3</button>
+        <button class="score-button" onclick="canviarFaltesLocal()">Falta</button>
+      </td>
+      <td>
+        <button class="score-button" onclick="canviarMarcadorVisitant(1)">+1</button>
+        <button class="score-button" onclick="canviarMarcadorVisitant(2)">+2</button>
+        <button class="score-button" onclick="canviarMarcadorVisitant(3)">+3</button>
+        <button class="score-button" onclick="canviarFaltesVisitant()">Falta</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="gestor">
+    <td><button class="score-button" id="reset" onclick="reiniciar()">Iniciar partida</button></td>
+    <td><button class="score-button" id="canviPeriode" onclick="canviarPeriode()">Canvi de període</button></td>
+  </div>
+  <div class="history">
+    <h2>Historial de la Partida</h2>
+    <p id="historial"></p>
+
+  </div>
+</div>
+</body>
+</html>
+
+
+

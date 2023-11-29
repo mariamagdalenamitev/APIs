@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marcador de Tennis</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="marcadorTennis.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="title text-center">Marcador de Tennis</header>
+    <nav class="links">Enllaços a altres pàgines</nav>
+    <table class="scoreboard">
+      <thead>
+        <tr>
+          <th>Jugador</th>
+          <th></th>
+          <th>Punts</th>
+          <th>Jocs</th>
+          <th>Sets</th>
+          <th>Accions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jugador 1</td>
+          <td>*</td>
+          <td id="score-a" onclick="">0</td>
+          <td id="games-a">0</td>
+          <td id="sets-a">0</td>
+          <td><button class="score-button" id="score-button-a" onclick="canviarMarcadorA()">+1</button></td>
+        </tr>
+        <tr>
+          <td>Jugador 2</td>
+          <td></td>
+          <td id="score-b">0</td>
+          <td id="games-b">0</td>
+          <td id="sets-b">0</td>
+          <td><button class="score-button" id="score-button-b" onclick="canviarMarcadorB()">+1</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="gestor">
+        <td><button class="score-button" id="reset" onclick="reiniciar()">Iniciar partida </button></td>
+    </div>
+    <div class="history">
+      <h2>Historial de la Partida</h2>
+      <p id="historial"></p>
+
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  color: #338733; /* Color del títol */
+}
+
+.links {
+  text-align: center;
+  font-size: 18px;
+  color: #4d4d33;
+  margin-top: 10px;
+}
+
+.scoreboard {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #fff; /* Fons blanc per al marcador */
+}
+
+.scoreboard th, .scoreboard td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.scoreboard th {
+  background-color: #cce0cc; /*Fons verd fluix per les capçaleres */
+}
+
+.scoreboard tr:nth-child(odd) {
+  background-color: #e5f2e9; /* Fondo alternatiu en files alternes*/
+}
+
+.icon-ball {
+  font-size: 20px;
+}
+
+.history {
+  background-color: #f2f2f2; /* Color de fons per l'historial */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+  margin-top: 20px;
+}
+
+.history h2 {
+  font-size: 24px;
+  color: #4d4d33; /* Color del títol de l'historial en color fons verd més fort */
+}
+
+.history p {
+  font-size: 18px;
+}
+
+/* Estilos anteriores */
+
+/*.score-button {*/
+/*  background-color: #007bff;*/
+/*  color: #fff;*/
+/*  border: none;*/
+/*  padding: 5px 10px;*/
+/*  font-size: 14px;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*.score-button:hover {*/
+/*  background-color: #0056b3;*/
+/*}*/
+
+/* Estilos anteriores */
+
+.scoreboard th, .scoreboard td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.scoreboard th {
+  background-color: #cce0cc; /* Fondo en verde pastel para las cabeceras */
+}
+
+.scoreboard tr:nth-child(odd) {
+  background-color: #e5f2e9; /* Fondo alternado en verde pastel */
+}
+
+/* Estilos para los botones de suma */
+.score-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.score-button:hover {
+  background-color: #0056b3;
+}
+
+.period-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.period-number {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+
+
+
