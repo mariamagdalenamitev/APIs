@@ -42,6 +42,7 @@ function canviarMarcadorB(){
         puntsB=10+puntsB
     }
     else if (puntsA==40 && puntsB==40){
+        //Si jugador que no té deventatja fa punt torna 40 40 (else if)
         puntsA=" "
         puntsB="AD"
         document.getElementById('score-a').innerHTML= puntsA
@@ -51,6 +52,7 @@ function canviarMarcadorB(){
         puntsB = 0
         jocsB++
         document.getElementById('games-b').innerHTML = jocsB
+        document.getElementById('score-a/score -').innerHTML = 0
 // He de posar el codi dels jocs aquí perquè me funcioni o no té res a veure
 // El joc era a partir de 7 mb ventatge de 2 o com?
 
@@ -69,10 +71,12 @@ let jocsA=0
 //Ja me funciona el sumar el joc després de AD però quan s'ha sumat, al que tenia DAD se queda en blanc
 function canviarJocsA(){
     if (jocsA==7 && jocsB<5)
+        jocsA=0
         setsA++
+    //pensar a mostrar-ho
     }
-//TODO Posar a l'historial quan feim un joc i un set
-//TODO programar els sets
+// TODO Posar a l'historial quan feim un joc i un set
+// TODO programar els sets
 let jocsB=0
 function canviarJocsB(){
 
