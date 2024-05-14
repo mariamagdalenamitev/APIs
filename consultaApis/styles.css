@@ -1,5 +1,5 @@
 .header {
-    background-color: #333;
+    background-color: #7f0909;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -37,5 +37,9 @@
     font-size: 1em;
     color: #eeeeee;
 }
-
+.header{
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
 
