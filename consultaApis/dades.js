@@ -1,5 +1,5 @@
 async function getLlibres() {
-    //Demana els personatges
+    //Demana els llibres
     const response = await fetch("https://potterapi-fedeperin.vercel.app/es/books");
     //Reb les dades en format json i les transforma a un array
     const llibres = await response.json(); // Mentre no funcioni podeu comentar aquesta línia i descomentar la següent. Després haurà de funcionar amb aquesta (Línia 5)
@@ -8,7 +8,7 @@ async function getLlibres() {
     console.log(llibres);
     //Com consultar el total de llibres
     console.log(llibres.length)
-    //Consulta el lllibre que està a la posició 0
+    //Consulta el llibre que està a la posició 0
     console.log(llibres[0])
     /* Heu de mostrar les dades d'aquests llibres a la web. Creau un element amb un id i allà introduiu el format html/css que desitgeu. Si voleu emprar les cards
       de la pàgina d'inici feis-ho. Demanau ajuda als companys
@@ -17,3 +17,36 @@ async function getLlibres() {
 
 //Crida getLlibres
 getLlibres()
+
+const url='https://potterapi-fedeperin.vercel.app/es/books'
+
+fetch(url)
+    .then(response=> response.json() )
+    .then(data => {
+
+        const table = document.getElementById("alicuotas");
+
+        data.forEach((e,i) => {    //< ---  recorremos data
+
+            let tr = document.createElement("tr"); //< ---  creamos una fila
+
+            let td = document.createElement("td"); //< ---  Hacemos columna index dentro de la fila
+            td.classList.add("index");
+            td.innerHTML = i;
+            tr.appendChild(td); //< --- Agregamos la columna en la fila
+
+            for (p in e) {  //< ---  recorremos cada propiedad de cada elemento
+
+                let td = document.createElement("td"); //< ---  Hacemos columna dentro de la fila
+                td.classList.add(p);//<-- le podemos agregar a toda la columna la misma clase
+                td.innerHTML = e[p];
+
+                tr.appendChild(td); //< --- Agregamos la columna en la fila
+
+            }
+
+            table.appendChild(tr); //< --- Agregamos la fila a la tabla
+
+        });
+    })
+    .catch(err=>console.log(err))
