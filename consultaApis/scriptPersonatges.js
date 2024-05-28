@@ -32,7 +32,7 @@ fetch(url)
 
             let td = document.createElement("td"); //< ---  Hacemos columna index dentro de la fila
             td.classList.add("index");
-            td.innerHTML = i;
+            td.innerHTML = i+1;
             tr.appendChild(td); //< --- Agregamos la columna en la fila
 
             for (p in e) {  //< ---  recorremos cada propiedad de cada elemento
