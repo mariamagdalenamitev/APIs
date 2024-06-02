@@ -40,9 +40,11 @@ fetch(url)
                 let td = document.createElement("td"); //< ---  Hacemos columna dentro de la fila
                 td.classList.add(p);//<-- le podemos agregar a toda la columna la misma clase
                 td.innerHTML = e[p];
-
                 tr.appendChild(td); //< --- Agregamos la columna en la fila
-
+            }
+            if (p.toString()=="cover"){
+                td.innerHTML= "<a href= llibre.html><img src="+e[p] + "></a>"
+                tr.appendChild(td)
             }
 
             table.appendChild(tr); //< --- Agregamos la fila a la tabla
@@ -50,3 +52,19 @@ fetch(url)
         });
     })
     .catch(err=>console.log(err))
+async function getPortades(){
+    const url='https://potterapi-fedeperin.vercel.app/es/books'
+    fetch(url)
+        .then(response=>response.json())
+        .catch(console.error)
+        .then(data => {
+            console.log(data)
+            console.log(data.length)
+            console.log(data[0].title)
+            const contingut =document.getElementById("cover2")
+            for (let i=0;i<data.length;i++){
+                contingut.innerHTML+= '<img src=" + data[i].cover + "">"/n'
+            }
+        })
+        .catch(err=>console.log(err))
+}
