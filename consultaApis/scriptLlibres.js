@@ -61,9 +61,9 @@ async function getPortades(){
             console.log(data)
             console.log(data.length)
             console.log(data[0].title)
-            const contingut =document.getElementById("cover2")
+            const contingut =document.getElementById("Portada")
             for (let i=0;i<data.length;i++){
-                contingut.innerHTML+= '<img src=" + data[i].cover + "">"/n'
+                contingut.innerHTML+= "<img src=" + data[i].portada + ">/n";
             }
         })
         .catch(err=>console.log(err))
